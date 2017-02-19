@@ -4,103 +4,29 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>Top</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ClothingType)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ClothingType)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Brand)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Brand)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Photo)
-        </dt>
-
-        <dd>
-            <img src="@Url.Content(Model.Photo)" style="background-size:cover;" />
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Color)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Color)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Occasion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Occasion)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Season)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Season)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Favorite)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Favorite)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TimesWorn)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TimesWorn)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Dirty)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Dirty)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Outfit.OutfitName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Outfit.OutfitName)
-        </dd>
-
-    </dl>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-9">
+            <img class="img-responsive" src="@Url.Content(Model.Photo)" style="background-size:cover;" />
+        </div>
+        <div class="col-lg-3">
+            <div class="text-center" style="font-size:20px;">
+                <h4 style="font-size:25px;"><u>@Html.DisplayFor(model => model.Name)</u></h4>
+                <br />
+                <p><strong>@Html.DisplayNameFor(model => model.ClothingType):</strong> @Html.DisplayFor(model => model.ClothingType)</p>
+                <p>  <strong>@Html.DisplayNameFor(model => model.Brand):</strong> @Html.DisplayFor(model => model.Brand)</p>
+                <p><strong>@Html.DisplayNameFor(model => model.Color):</strong> @Html.DisplayFor(model => model.Color)</p>
+                <p><strong>@Html.DisplayNameFor(model => model.Occasion):</strong> @Html.DisplayFor(model => model.Occasion)</p>
+                <p><strong>@Html.DisplayNameFor(model => model.Season):</strong> @Html.DisplayFor(model => model.Season)</p>
+                <p><strong>@Html.DisplayNameFor(model => model.Favorite):</strong> @Html.DisplayFor(model => model.Favorite)</p>
+                <p><strong>@Html.DisplayNameFor(model => model.TimesWorn):</strong> @Html.DisplayFor(model => model.TimesWorn)</p>
+                <p><strong>@Html.DisplayNameFor(model => model.Dirty):</strong> @Html.DisplayFor(model => model.Dirty)</p>
+                @*<p><strong>@Html.DisplayNameFor(model => model.Outfit.OutfitName):</strong> @Html.DisplayFor(model => model.Outfit.OutfitName)</p>*@
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.TopsID }) |
+                    @Html.ActionLink("Back to List", "Index")
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.TopsID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

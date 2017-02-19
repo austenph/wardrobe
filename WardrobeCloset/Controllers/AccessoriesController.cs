@@ -20,7 +20,7 @@ namespace WardrobeCloset.Controllers
             var accessories = db.Accessories.Include(a => a.Outfit);
             return View(accessories.ToList());
         }
-
+       
         // GET: Accessories/Details/5
         public ActionResult Details(int? id)
         {
