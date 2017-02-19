@@ -12,9 +12,9 @@
 <div class="row">
     @foreach (var item in Model)
     {
-        <div class="col-md-12">
+        <div class="col-md-6">
             <div class="thumbnail">
-                <img src="@Url.Content(item.Photo)" style="background-size:cover;" />
+                <img src="@Url.Content("~/Content/shirtsrack.jpg")" style="background-size:cover;" />
                 <div class="caption">
                     <p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(modelItem => item.Name)
                     <p>@Html.DisplayNameFor(model => model.ClothingType): @Html.DisplayFor(modelItem => item.ClothingType)</p>

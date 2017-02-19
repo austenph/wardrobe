@@ -1,8 +1,12 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-family: 'Muli', sans-serif;
 }
-
+.page-header{
+    padding:0px;
+    margin-top:0px;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -22,3 +26,22 @@ select,
 textarea {
     max-width: 280px;
 }
+.navbar-collapse{
+    text-align:center;
+}
+#centered{
+          display:inline-block;
+      float:none;
+}
+ a{
+    color:black;
+    font-size:20px;
+}
+   .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 80%;
+      margin:auto;
+  height: 700px;
+  max-height: 700px;
+  background-size:cover;
+  }

@@ -1,31 +1,134 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
 
-<div class="jumbotron">
-    <h1>ProCloset</h1>
-    <p class="lead">Sleek, Simple, Elegant Closet Organization App</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="~/Content/accessories.jpg" />
+            <div class="carousel-caption">
+                <h3>ProCloset</h3>
+                <p>Simple, Sleek, Elegant Online Closet Tool</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="~/Content/clothinghome.jpg" />
+            <div class="carousel-caption">
+                <h3>Accessories</h3>
+                <p>Store your accessories to mix and match with outfits.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="~/Content/shirtsrack.jpg" />
+            <div class="carousel-caption">
+                <h3>Shirts Rack</h3>
+                <p>Keep Track of all of your shirts.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="~/Content/pants.jpg" />
+            <div class="carousel-caption">
+                <h3>Pants</h3>
+                <p>No need to dig through your drawer to find pants here.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="~/Content/Shoes.jpg" />
+            <div class="carousel-caption">
+                <h3>Shoes</h3>
+                <p>All your shoes in one place, just upload a photo!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
+<script>
+    $(document).ready(function () {
+        // Activate Carousel
+        $("#myCarousel").carousel({ interval: 1000 });
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        // Enable Carousel Indicators
+        $(".item1").click(function () {
+            $("#myCarousel").carousel(0);
+        });
+        $(".item2").click(function () {
+            $("#myCarousel").carousel(1);
+        });
+        $(".item3").click(function () {
+            $("#myCarousel").carousel(2);
+        });
+        $(".item4").click(function () {
+            $("#myCarousel").carousel(3);
+        });
+
+        // Enable Carousel Controls
+        $(".left").click(function () {
+            $("#myCarousel").carousel("prev");
+        });
+        $(".right").click(function () {
+            $("#myCarousel").carousel("next");
+        });
+    });
+</script>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="thumbnail">
+                <h2>Tops</h2>
+                <img src="~/Content/shirtsrack.jpg" style="background-size:cover;" />
+                <div class="caption">
+                    @Html.ActionLink("Tops", "Index", "Tops", new { @class = "btn btn-primary", role = "button" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="thumbnail">
+                <h2>Bottoms</h2>
+                <img src="~/Content/pants.jpg" style="background-size:inherit;" />
+                <div class="caption">
+                    @Html.ActionLink("Bottoms", "Index", "Bottoms", new { @class = "btn btn-primary", role = "button" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="thumbnail">
+                <h2>Shoes</h2>
+                <img src="~/Content/Shoes.jpg" style="background-size:cover;" />
+                <div class="caption">
+                    @Html.ActionLink("Shoes", "Index", "Shoes", new { @class = "btn btn-primary", role = "button" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="thumbnail">
+                <h2>Accessories</h2>
+                <img src="~/Content/clothinghome.jpg" style="background-size:cover;" />
+                <div class="caption">
+                    @Html.ActionLink("Accessories", "Index", "Accessories", new { @class = "btn btn-primary", role = "button" })
+                </div>
+            </div>
+        </div>
     </div>
 </div>
