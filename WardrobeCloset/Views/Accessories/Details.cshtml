@@ -10,6 +10,7 @@
     <h4>Accessory</h4>
     <hr />
     <dl class="dl-horizontal">
+
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
@@ -39,7 +40,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Photo)
+            <img src="@Url.Content(Model.Photo)" style="background-size:cover;" />
         </dd>
 
         <dt>
