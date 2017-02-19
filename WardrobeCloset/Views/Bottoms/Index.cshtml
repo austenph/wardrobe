@@ -9,85 +9,30 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ClothingType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Brand)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Photo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Color)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Occasion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Season)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Favorite)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TimesWorn)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Dirty)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Outfit.OutfitName)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ClothingType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Brand)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Photo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Color)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Occasion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Season)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Favorite)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TimesWorn)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Dirty)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Outfit.OutfitName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BottomsID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.BottomsID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.BottomsID })
-        </td>
-    </tr>
-}
-
-</table>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-12">
+            <div class="thumbnail">
+                <img src="@Url.Content(item.Photo)" style="background-size:cover;" />
+                <div class="caption">
+                    <p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(modelItem => item.Name)
+                    <p>@Html.DisplayNameFor(model => model.ClothingType): @Html.DisplayFor(modelItem => item.ClothingType)</p>
+                    <p> @Html.DisplayNameFor(model => model.Brand): @Html.DisplayFor(modelItem => item.Brand)</p>
+                    <p>  @Html.DisplayNameFor(model => model.Color): @Html.DisplayFor(modelItem => item.Color)</p>
+                    <p>  @Html.DisplayNameFor(model => model.Occasion): @Html.DisplayFor(modelItem => item.Occasion)</p>
+                    <p>   @Html.DisplayNameFor(model => model.Season): @Html.DisplayFor(modelItem => item.Season)</p>
+                    <p>@Html.DisplayNameFor(model => model.Favorite): @Html.DisplayFor(modelItem => item.Favorite)</p>
+                    <p>@Html.DisplayNameFor(model => model.TimesWorn): @Html.DisplayFor(modelItem => item.TimesWorn)</p>
+                    <p>@Html.DisplayNameFor(model => model.Dirty): @Html.DisplayFor(modelItem => item.Dirty)</p>
+                    <p>@Html.DisplayNameFor(model => model.Outfit.OutfitName): @Html.DisplayFor(modelItem => item.Outfit.OutfitName)</p>
+                    <p>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.BottomsID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.BottomsID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.BottomsID })
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
