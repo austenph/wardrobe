@@ -92,41 +92,37 @@
         });
     });
 </script>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-6">
-            <div class="thumbnail">
+            <div class="thumbnail top-image">
                 <h2>Tops</h2>
-                <img src="~/Content/shirtsrack.jpg" style="background-size:cover;" />
                 <div class="caption">
-                    @Html.ActionLink("Tops", "Index", "Tops", new { @class = "btn btn-primary", role = "button" })
+                    <button type="button">@Html.ActionLink("Tops", "Index", "Tops")</button>
                 </div>
             </div>
         </div>
         <div class="col-md-6">
-            <div class="thumbnail">
+            <div class="thumbnail bottom-image">
                 <h2>Bottoms</h2>
-                <img src="~/Content/pants.jpg" style="background-size:inherit;" />
                 <div class="caption">
-                    @Html.ActionLink("Bottoms", "Index", "Bottoms", new { @class = "btn btn-primary", role = "button" })
-                </div>
+                    <button type="button">@Html.ActionLink("Bottoms", "Index", "Bottoms")</button>
+</div>
             </div>
         </div>
         <div class="col-md-6">
-            <div class="thumbnail">
+            <div class="thumbnail shoe-image">
                 <h2>Shoes</h2>
-                <img src="~/Content/Shoes.jpg" style="background-size:cover;" />
                 <div class="caption">
-                    @Html.ActionLink("Shoes", "Index", "Shoes", new { @class = "btn btn-primary", role = "button" })
+                    <button type="button">@Html.ActionLink("Shoes", "Index", "Shoes")</button>
                 </div>
             </div>
         </div>
         <div class="col-md-6">
-            <div class="thumbnail">
+            <div class="thumbnail access-image">
                 <h2>Accessories</h2>
-                <img src="~/Content/clothinghome.jpg" style="background-size:cover;" />
                 <div class="caption">
-                    @Html.ActionLink("Accessories", "Index", "Accessories", new { @class = "btn btn-primary", role = "button" })
+                    <button type="button">@Html.ActionLink("Accessories", "Index", "Accessories")</button>
                 </div>
             </div>
         </div>

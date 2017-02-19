@@ -3,27 +3,24 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
-
+<div class="row">
+    <div class="col-lg-12" style="border:1px solid black;">
+        <h2 style="text-align:center;">Tops</h2>
+    </div>
+</div>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <div class="row">
     @foreach (var item in Model)
     {
-        <div class="col-md-6">
-            <div class="thumbnail">
-                <img src="@Url.Content("~/Content/shirtsrack.jpg")" style="background-size:cover;" />
+        <div class="col-md-4 tops" style="border:0px;">
+            <div class="thumbnail" style="border:0px;">
+                <img src="@Url.Content(item.Photo)" />
                 <div class="caption">
                     <p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(modelItem => item.Name)
                     <p>@Html.DisplayNameFor(model => model.ClothingType): @Html.DisplayFor(modelItem => item.ClothingType)</p>
-                    <p> @Html.DisplayNameFor(model => model.Brand): @Html.DisplayFor(modelItem => item.Brand)</p>
-                    <p>  @Html.DisplayNameFor(model => model.Color): @Html.DisplayFor(modelItem => item.Color)</p>
-                    <p>  @Html.DisplayNameFor(model => model.Occasion): @Html.DisplayFor(modelItem => item.Occasion)</p>
-                    <p>   @Html.DisplayNameFor(model => model.Season): @Html.DisplayFor(modelItem => item.Season)</p>
                     <p>@Html.DisplayNameFor(model => model.Favorite): @Html.DisplayFor(modelItem => item.Favorite)</p>
-                    <p>@Html.DisplayNameFor(model => model.TimesWorn): @Html.DisplayFor(modelItem => item.TimesWorn)</p>
                     <p>@Html.DisplayNameFor(model => model.Dirty): @Html.DisplayFor(modelItem => item.Dirty)</p>
                     <p>@Html.DisplayNameFor(model => model.Outfit.OutfitName): @Html.DisplayFor(modelItem => item.Outfit.OutfitName)</p>
                     <p>

@@ -1,6 +1,6 @@
 ﻿body {
     padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 20px;
     font-family: 'Muli', sans-serif;
 }
 .page-header{
@@ -45,3 +45,37 @@ textarea {
   max-height: 700px;
   background-size:cover;
   }
+   .row .col-md-6{
+       padding:0px;
+       margin:0px;
+   }
+   .row .col-md-6 .thumbnail{
+       height:478px;
+       width:auto;
+       color:white;
+       padding:0px;
+       margin-right:0px;
+   }
+.top-image {
+    background-image: url('shirtsrack.jpg');
+    background-size:cover;
+    margin-bottom:0px;
+}
+.bottom-image {
+    background-image: url('pants.jpg');
+        background-size:cover;
+            margin-bottom:0px;
+
+}
+.shoe-image {
+    background-image: url('Shoes.jpg');
+    background-size: cover;
+        margin-bottom:0px;
+
+}
+.access-image {
+    background-image: url('clothinghome.jpg');
+    background-size: cover;
+        margin-bottom:0px;
+
+}
