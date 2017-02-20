@@ -92,25 +92,25 @@ a {
     }
 /*Images for Home/Index grid*/
 .top-image {
-    background-image: url('shirtsrack.jpg');
+    background-image: url('rackofshirts.jpg');
     background-size: cover;
     margin-bottom: 0px;
 }
 
 .bottom-image {
-    background-image: url('pants.jpg');
+    background-image: url('clothinglinepants.jpg');
     background-size: cover;
     margin-bottom: 0px;
 }
 
 .shoe-image {
-    background-image: url('Shoes.jpg');
+    background-image: url('flats.jpg');
     background-size: cover;
     margin-bottom: 0px;
 }
 
 .access-image {
-    background-image: url('clothinghome.jpg');
+    background-image: url('accessNew.jpg');
     background-size: cover;
     margin-bottom: 0px;
 }
@@ -138,6 +138,7 @@ a {
 .thumbnail {
     border: 0px;
 }
+
 /*all images of class responsive*/
 .img-responsive {
     background-size: cover;
