@@ -160,6 +160,7 @@
     <Compile Include="Controllers\AccessoriesController.cs" />
     <Compile Include="Controllers\BottomsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OutfitsController.cs" />
     <Compile Include="Controllers\ShoesController.cs" />
     <Compile Include="Controllers\TopsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -217,6 +218,7 @@
     <Content Include="Content\leatherjacket.jpg" />
     <Content Include="Content\lightjeans.jpg" />
     <Content Include="Content\mainpage.jpg" />
+    <Content Include="Content\Outfit.jpg" />
     <Content Include="Content\pants.jpg" />
     <Content Include="Content\purse.jpg" />
     <Content Include="Content\rackofshirts.jpg" />
@@ -313,6 +315,11 @@
     <Content Include="Views\Shoes\Details.cshtml" />
     <Content Include="Views\Shoes\Edit.cshtml" />
     <Content Include="Views\Shoes\Index.cshtml" />
+    <Content Include="Views\Outfits\Create.cshtml" />
+    <Content Include="Views\Outfits\Delete.cshtml" />
+    <Content Include="Views\Outfits\Details.cshtml" />
+    <Content Include="Views\Outfits\Edit.cshtml" />
+    <Content Include="Views\Outfits\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

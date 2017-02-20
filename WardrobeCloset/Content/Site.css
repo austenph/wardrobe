@@ -137,15 +137,36 @@ a {
 /*All Thumbnails*/
 .thumbnail {
     border: 0px;
+     background-color:#ECECEC;
 }
 
 /*all images of class responsive*/
 .img-responsive {
     background-size: cover;
 }
+/*Words on top of Home page Images*/
 .newheader{
-    color:firebrick;
+    color:black;
     font-weight:bold;
     text-align:center;
     display:inline;
 }
+.newheader h2{
+    margin-top:1px;
+}
+/*Outfit Settings*/
+.outfit {
+    background-image: url('Outfit.jpg');
+    background-size:cover;
+}
+.outfitthumb{
+    margin-top:20px;
+    background-color: rgba(255,255,255,0.8) ;
+}
+.indexheaderoutfit {
+    border: none;
+}
+
+    .indexheaderoutfit > h2, p {
+        text-align: center;
+    }
