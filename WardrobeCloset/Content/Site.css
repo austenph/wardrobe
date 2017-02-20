@@ -1,12 +1,10 @@
-﻿body {
+﻿/*Body of Document Default Settings*/
+body {
     padding-top: 0px;
     padding-bottom: 20px;
     font-family: 'Muli', sans-serif;
 }
-.page-header{
-    padding:0px;
-    margin-top:0px;
-}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -26,56 +24,121 @@ select,
 textarea {
     max-width: 280px;
 }
-.navbar-collapse{
-    text-align:center;
+/*Header settings*/
+.page-header {
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
-#centered{
-          display:inline-block;
-      float:none;
+
+.header-top {
+    background-color: black;
 }
- a{
-    color:black;
-    font-size:20px;
+
+#mainheader {
+    color: white;
+    text-align: center;
+    font-size: 46px;
 }
-   .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 80%;
-      margin:auto;
-  height: 700px;
-  max-height: 700px;
-  background-size:cover;
-  }
-   .row .col-md-6{
-       padding:0px;
-       margin:0px;
-   }
-   .row .col-md-6 .thumbnail{
-       height:478px;
-       width:auto;
-       color:white;
-       padding:0px;
-       margin-right:0px;
-   }
+/*Navbar centering, colors, display, and more*/
+.navbar-collapse {
+    text-align: center;
+}
+
+.navbar.navbar.navbar-static-top {
+    background-color: #ECECEC;
+    margin-bottom: 0px;
+    border-bottom-width: 0px;
+}
+
+.navbar-toggle {
+    background-color: black;
+}
+
+.icon-bar {
+    background-color: white;
+}
+
+#centered {
+    display: inline-block;
+    float: none;
+}
+
+a {
+    color: black;
+    font-size: 20px;
+}
+/*Carousel settings*/
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 80%;
+    margin: auto;
+    height: 700px;
+    max-height: 700px;
+    background-size: cover;
+}
+/*all columns of size 6 and additional settings*/
+.row .col-md-6 {
+    padding: 0px;
+    margin: 0px;
+}
+
+    .row .col-md-6 .thumbnail {
+        height: 478px;
+        width: auto;
+        color: white;
+        padding: 0px;
+        margin-right: 0px;
+    }
+/*Images for Home/Index grid*/
 .top-image {
     background-image: url('shirtsrack.jpg');
-    background-size:cover;
-    margin-bottom:0px;
+    background-size: cover;
+    margin-bottom: 0px;
 }
+
 .bottom-image {
     background-image: url('pants.jpg');
-        background-size:cover;
-            margin-bottom:0px;
-
+    background-size: cover;
+    margin-bottom: 0px;
 }
+
 .shoe-image {
     background-image: url('Shoes.jpg');
     background-size: cover;
-        margin-bottom:0px;
-
+    margin-bottom: 0px;
 }
+
 .access-image {
     background-image: url('clothinghome.jpg');
     background-size: cover;
-        margin-bottom:0px;
+    margin-bottom: 0px;
+}
+/*All Headers and Content on an Models Index Page*/
+.indexheader {
+    border: 1px solid black;
+}
 
+    .indexheader > h2, p {
+        text-align: center;
+    }
+
+.detailscontent {
+    font-size: 20px;
+}
+
+.detailsheader {
+    font-size: 25px;
+}
+
+.indexcontent {
+    font-size: 18px;
+}
+/*All Thumbnails*/
+.thumbnail {
+    border: 0px;
+}
+/*all images of class responsive*/
+.img-responsive {
+    background-size: cover;
 }

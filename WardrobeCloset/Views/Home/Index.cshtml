@@ -1,6 +1,7 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<!--Additional Bootstrap Element 2: Carousel of Images running on a timer. Images not the best but just to show functionality-->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -14,7 +15,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img src="~/Content/accessories.jpg" />
+            <img class="img-responsive" src="~/Content/accessories.jpg" />
             <div class="carousel-caption">
                 <h3>ProCloset</h3>
                 <p>Simple, Sleek, Elegant Online Closet Tool</p>
@@ -22,7 +23,7 @@
         </div>
 
         <div class="item">
-            <img src="~/Content/clothinghome.jpg" />
+            <img class="img-responsive" src="~/Content/clothinghome.jpg" />
             <div class="carousel-caption">
                 <h3>Accessories</h3>
                 <p>Store your accessories to mix and match with outfits.</p>
@@ -30,7 +31,7 @@
         </div>
 
         <div class="item">
-            <img src="~/Content/shirtsrack.jpg" />
+            <img class="img-responsive" src="~/Content/shirtsrack.jpg" />
             <div class="carousel-caption">
                 <h3>Shirts Rack</h3>
                 <p>Keep Track of all of your shirts.</p>
@@ -38,7 +39,7 @@
         </div>
 
         <div class="item">
-            <img src="~/Content/pants.jpg" />
+            <img class="img-responsive" src="~/Content/pants.jpg" />
             <div class="carousel-caption">
                 <h3>Pants</h3>
                 <p>No need to dig through your drawer to find pants here.</p>
@@ -46,7 +47,7 @@
         </div>
 
         <div class="item">
-            <img src="~/Content/Shoes.jpg" />
+            <img class="img-responsive" src="~/Content/Shoes.jpg" />
             <div class="carousel-caption">
                 <h3>Shoes</h3>
                 <p>All your shoes in one place, just upload a photo!</p>
@@ -64,10 +65,11 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+<!--Javascript syntax for adding a timer to a carousel courtesy of W3C-->
 <script>
     $(document).ready(function () {
         // Activate Carousel
-        $("#myCarousel").carousel({ interval: 1000 });
+        $("#myCarousel").carousel({ interval: 1000 }); //Timer
 
         // Enable Carousel Indicators
         $(".item1").click(function () {
@@ -92,10 +94,11 @@
         });
     });
 </script>
+<!--Container that has a Grid of Images and Links to the four main types of clothing-->
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6">
-            <div class="thumbnail top-image">
+            <div class="thumbnail top-image"> <!--Tops Link and Grid-->
                 <h2>Tops</h2>
                 <div class="caption">
                     <button type="button">@Html.ActionLink("Tops", "Index", "Tops")</button>
@@ -103,7 +106,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="thumbnail bottom-image">
+            <div class="thumbnail bottom-image"><!--Bottoms Link and Grid-->
                 <h2>Bottoms</h2>
                 <div class="caption">
                     <button type="button">@Html.ActionLink("Bottoms", "Index", "Bottoms")</button>
@@ -111,7 +114,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="thumbnail shoe-image">
+            <div class="thumbnail shoe-image"><!--Shoes Link and Grid-->
                 <h2>Shoes</h2>
                 <div class="caption">
                     <button type="button">@Html.ActionLink("Shoes", "Index", "Shoes")</button>
@@ -119,7 +122,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="thumbnail access-image">
+            <div class="thumbnail access-image"><!--Accessories Link and Grid-->
                 <h2>Accessories</h2>
                 <div class="caption">
                     <button type="button">@Html.ActionLink("Accessories", "Index", "Accessories")</button>
