@@ -143,3 +143,9 @@ a {
 .img-responsive {
     background-size: cover;
 }
+.newheader{
+    color:firebrick;
+    font-weight:bold;
+    text-align:center;
+    display:inline;
+}
